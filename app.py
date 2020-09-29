@@ -46,5 +46,6 @@ if st.button("add point"):
 
 if points:
     xs, ys, cs = zip(*points)
-    plt.scatter(xs, ys, c=cs)
-    st.pyplot()
+    fig, ax = plt.subplots()
+    ax.scatter(xs, ys, c=cs)
+    st.pyplot(fig)
